@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse\\BackGameVerse.csproj": {}
+    "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse\\BackGameVerse.csproj": {
+    "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse\\BackGameVerse.csproj",
+        "projectUniqueName": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse.csproj",
         "projectName": "BackGameVerse",
-        "projectPath": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse\\BackGameVerse.csproj",
+        "projectPath": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse.csproj",
         "packagesPath": "C:\\Users\\MASTER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse\\obj\\",
+        "outputPath": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
