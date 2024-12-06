@@ -22,11 +22,10 @@ namespace BackGameVerse.Entities
         [MaxLength(400)]
         public string LongDescription { get; set; }
 
-        public Game(int id, string title, double score, int year,
+        public Game(string title, double score, int year,
             string genre, string platforms, string imgUrl, 
             string shortDescription, string longDescription)
         {
-            Id = id;
             Title = title;
             Score = score;
             Year = year;

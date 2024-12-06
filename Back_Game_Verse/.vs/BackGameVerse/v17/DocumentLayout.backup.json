@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\BackGameVerse\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09B7BA80-70AC-48DF-9AB2-56421F2305C4}|BackGameVerse.csproj|c:\\users\\master\\source\\gameverse\\back_game_verse\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09B7BA80-70AC-48DF-9AB2-56421F2305C4}|BackGameVerse.csproj|solutionrelative:entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09B7BA80-70AC-48DF-9AB2-56421F2305C4}|BackGameVerse.csproj|c:\\users\\master\\source\\gameverse\\back_game_verse\\data\\seeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09B7BA80-70AC-48DF-9AB2-56421F2305C4}|BackGameVerse.csproj|solutionrelative:data\\seeding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09B7BA80-70AC-48DF-9AB2-56421F2305C4}|BackGameVerse.csproj|c:\\users\\master\\source\\gameverse\\back_game_verse\\data\\gameversecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09B7BA80-70AC-48DF-9AB2-56421F2305C4}|BackGameVerse.csproj|solutionrelative:data\\gameversecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameVerseContext.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\Data\\GameVerseContext.cs",
+              "RelativeDocumentMoniker": "Data\\GameVerseContext.cs",
+              "ToolTip": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\Data\\GameVerseContext.cs",
+              "RelativeToolTip": "Data\\GameVerseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:36:59.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Seeding.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\Data\\Seeding.cs",
+              "RelativeDocumentMoniker": "Data\\Seeding.cs",
+              "ToolTip": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\Data\\Seeding.cs",
+              "RelativeToolTip": "Data\\Seeding.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:34:35.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\Entities\\Game.cs",
+              "RelativeDocumentMoniker": "Entities\\Game.cs",
+              "ToolTip": "C:\\Users\\MASTER\\source\\GameVerse\\Back_Game_Verse\\Entities\\Game.cs",
+              "RelativeToolTip": "Entities\\Game.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAywBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:21:18.813Z",
+              "EditorCaption": ""
             }
           ]
         }

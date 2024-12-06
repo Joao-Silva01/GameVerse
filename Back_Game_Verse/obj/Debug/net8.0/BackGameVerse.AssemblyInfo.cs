@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackGameVerse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1294aaec1cc277b2ccf4acff4a8af1c05d82d0d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36d774d9cc694ffb51dd10bb6921d207c830fa5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackGameVerse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackGameVerse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BackGameVerse.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace BackGameVerse.Data
 {
@@ -8,6 +9,7 @@ namespace BackGameVerse.Data
         {
         }
 
-
+        public DbSet<Game> TGames { get; set; }
+        public DbSet<GameList> TGamesList { get; set; }
     }
 }
