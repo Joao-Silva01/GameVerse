@@ -1,0 +1,6 @@
+@BackGameVerse_HostAddress = http://localhost:5115
+
+GET {{BackGameVerse_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
