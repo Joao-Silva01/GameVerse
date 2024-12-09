@@ -36,5 +36,20 @@ namespace BackGameVerse.Data
         }
 
 
+        // Muda a posição do game
+        public async Task UpdateBelongingPositionAsync(int listId, int gameId,int newPosition)
+        {
+            var belonging = await Belongings.FirstOrDefaultAsync(b => b.GameListId == listId && b.GameId == gameId);
+
+            if (belonging != null)
+            {
+                belonging.Position = newPosition;
+                await SaveChangesAsync();
+            }
+
+            
+        }
+
+
     }
 }
