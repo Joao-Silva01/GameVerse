@@ -11,5 +11,11 @@ namespace BackGameVerse.Data
 
         public DbSet<Game> TGames { get; set; }
         public DbSet<GameList> TGamesList { get; set; }
+        public DbSet<Belonging> Belongings { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Belonging>().HasKey(foreign => new { foreign.GameId, foreign.GameListId });
+        }
     }
 }

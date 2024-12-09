@@ -88,6 +88,20 @@ namespace BackGameVerse.Data
                 "nisi deleniti dicta odit voluptatem nam provident temporibus reprehenderit blanditiis consectetur tenetur." +
                 "Dignissimos blanditiis quod corporis iste, aliquid perspiciatis architecto quasi tempore ipsam voluptates ea ad distinctio, sapiente qui, amet quidem culpa.");
 
+
+            Belonging b1 = new Belonging(1, 1, 0);
+            Belonging b2 = new Belonging(1, 2, 1);
+            Belonging b3 = new Belonging(1, 3, 2);
+            Belonging b4 = new Belonging(1, 4, 3);
+            Belonging b5 = new Belonging(1, 5, 4);
+
+            Belonging b6 = new Belonging(2, 6, 0);
+            Belonging b7 = new Belonging(2, 7, 1);
+            Belonging b8 = new Belonging(2, 8, 2);
+            Belonging b9 = new Belonging(2, 9, 3);
+            Belonging b10 = new Belonging(2, 10, 4);
+
+            _context.Belongings.AddRangeAsync(b1,b2,b3,b4,b5,b6,b7,b8,b9,b10);
             _context.TGamesList.AddRangeAsync(gl1,gl2);
             _context.TGames.AddRangeAsync(g1,g2,g3,g4,g5,g6,g7,g8,g9,g10);
             _context.SaveChangesAsync();
