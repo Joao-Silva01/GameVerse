@@ -7,7 +7,7 @@
         public int GameListId { get; set; }
         public int Position { get; set; }
 
-        public Belonging(int gameId, int gameListId, int position)
+        public Belonging(int gameListId ,int gameId, int position)
         {
             GameId = gameId;
             GameListId = gameListId;

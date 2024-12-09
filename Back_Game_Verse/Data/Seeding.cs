@@ -101,9 +101,9 @@ namespace BackGameVerse.Data
             Belonging b9 = new Belonging(2, 9, 3);
             Belonging b10 = new Belonging(2, 10, 4);
 
-            _context.Belongings.AddRangeAsync(b1,b2,b3,b4,b5,b6,b7,b8,b9,b10);
-            _context.TGamesList.AddRangeAsync(gl1,gl2);
-            _context.TGames.AddRangeAsync(g1,g2,g3,g4,g5,g6,g7,g8,g9,g10);
+            _context.TGamesList.AddRangeAsync(gl1, gl2);
+            _context.TGames.AddRangeAsync(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10);
+            _context.Belongings.AddRangeAsync(b1, b2, b3, b4, b5, b6, b7, b8, b9, b10);
             _context.SaveChangesAsync();
 
         }

@@ -10,6 +10,7 @@ builder.Services.AddDbContext<GameVerseContext>(x => x.UseInMemoryDatabase("Game
 builder.Services.AddScoped<Seeding>();
 builder.Services.AddScoped<GameService>();
 builder.Services.AddScoped<GameListService>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

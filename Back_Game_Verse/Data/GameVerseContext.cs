@@ -1,4 +1,5 @@
-﻿using BackGameVerse.Entities;
+﻿using BackGameVerse.DTO;
+using BackGameVerse.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BackGameVerse.Data
@@ -15,7 +16,25 @@ namespace BackGameVerse.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Belonging>().HasKey(foreign => new { foreign.GameId, foreign.GameListId });
+            // Faz uma chave estrangeira composta
+            modelBuilder.Entity<Belonging>().HasKey(f => new { f.GameId, f.GameListId });
         }
+
+
+        // Retorna todos os jogos de acordo com o Id da lista
+        public async Task<List<GameMinDTO>> SearchByListAsync(int listId)
+        {
+            var result = await(
+                from game in TGames
+                join belonging in Belongings on game.Id equals belonging.GameId
+                where belonging.GameListId == listId
+                orderby belonging.Position
+                select new GameMinDTO(game)
+                ).ToListAsync();
+
+            return result;
+        }
+
+
     }
 }
