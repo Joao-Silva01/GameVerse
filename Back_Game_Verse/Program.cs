@@ -29,6 +29,13 @@ if (app.Environment.IsDevelopment())
     }
 }
 
+app.UseCors(option =>
+{
+    option.WithOrigins("http://localhost:5173");
+    option.AllowAnyMethod();
+    option.AllowAnyHeader();
+});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
