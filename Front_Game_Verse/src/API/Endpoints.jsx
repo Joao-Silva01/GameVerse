@@ -22,5 +22,5 @@ export async function UpdatePosition(listId, inital, destination) {
         Destination : destination
     }
 
-    return await Connection.post(`/gameList/${listId}/replacement`, body);
+    return await Connection.post(`/gameList/${listId}`, body);
 }
