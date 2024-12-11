@@ -7,7 +7,7 @@ import GameList from './Components/GameList.jsx'
 
 const router = createBrowserRouter([
   {
-    path : "/GameVerse",
+    path : "/",
     element: <App/>
   },
   {

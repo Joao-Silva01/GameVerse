@@ -1,5 +1,5 @@
 import { useState } from "react"
-import GetAllList from "./API/Endpoints";
+import fetchAllList from "./API/Endpoints";
 import { useEffect } from "react";
 import AllGameList from "./Components/AllGameList";
 
@@ -7,13 +7,13 @@ import AllGameList from "./Components/AllGameList";
 function App() {
   const[data,setData] = useState([]);
 
-  async function GetAll(){
-      const allList = await GetAllList();
+  async function GetAllList(){
+      const allList = await fetchAllList();
       setData(allList);
   }
 
   useEffect(() =>{
-    GetAll();
+    GetAllList();
   },[]);
 
   return (
