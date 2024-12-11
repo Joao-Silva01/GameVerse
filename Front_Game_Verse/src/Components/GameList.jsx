@@ -1,12 +1,13 @@
 import { ArrowBigLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { fetchByList, UpdatePosition } from "../API/Endpoints";
+import { fetchByList, UpdatePosition,  } from "../API/Endpoints";
 import GameListItem from "./GameListItem";
+import { DragDropContext, Droppable } from "@hello-pangea/dnd";
 
 function GameList(){
 
-    const [gameList,setGameList] = useState([]);
+    const [gameList, setGameList] = useState([]);
     const [params] = useSearchParams();
     const navigate = useNavigate();
 
@@ -14,20 +15,42 @@ function GameList(){
     const ListId = params.get("listId");
     const NameList = params.get("nameList");
 
+    function handleDragEnd(result){
+        // Se o item não foi colocado em um local válido, termina a função
+        if(!result.destination) {return;}
+        
+        // Atualiza na Lista local
+        const games = gameList;
+        const [localList] = games.splice(result.source.index,1);
+        games.splice(result.destination.index,0,localList);
+        setGameList(games);
 
-    // Requisições de endpoints
-    function GetByList(){
-        const data = fetchByList(ListId);
-        setGameList(data);
-    }
 
-    function HandleUpdatePosition(listId, init, dest){
-        UpdatePosition(listId,init,dest);
+        // Atualiza na API
+        try{
+            handleUpdatePosition(ListId,result.source.index,result.destination.index);
+        }catch(error){
+            console.error("Error Update API: ", error)
+            getByList(ListId);
+        }
     }
     
 
+
+
+    // Requisições de endpoints
+    async function getByList(){
+        const data = await fetchByList(ListId);
+        setGameList(data);
+    }
+
+    
+    async function handleUpdatePosition(listId, init, dest) {
+        await UpdatePosition(listId,init, dest);
+    }
+
     useEffect(() =>{
-        GetByList()
+        getByList()
     },[])
 
     return(
@@ -46,13 +69,24 @@ function GameList(){
                 </button>
             </div>
             <div className="flex mt-10 ml-10 mr-10 overflow-auto shadow h-[500px] bg-white justify-center rounded-[15px] ">
-                <div className="m-4">
+                <DragDropContext onDragEnd={handleDragEnd}>
+                    <Droppable droppableId="game" direction="vertical">
+                        {(provided) => (
+                            <div className="m-4"
+                            ref={provided.innerRef}
+                            {...provided.droppableProps}>
 
-                {gameList.map(game =>(
-                    <GameListItem key={game.id} game={game}/>
-                ))}
-
-                </div>
+                            {gameList.map((game,position) =>(
+                                <GameListItem 
+                                key={game.id} 
+                                game={game}
+                                position={position}/>
+                            ))}
+                            {provided.placeholder}
+                        </div>
+                        )}
+                    </Droppable>
+                </DragDropContext>
             </div>
         </div>
     )
