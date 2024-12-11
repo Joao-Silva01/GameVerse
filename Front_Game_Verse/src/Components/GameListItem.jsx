@@ -1,6 +1,6 @@
 import { Draggable } from "@hello-pangea/dnd";
 
-export default function GameListItem({game, position}){
+export default function GameListItem({game, position, getGame}){
     return(
         <Draggable key={game.id} draggableId={game.id.toString()} index={position}>
             {(provided) => (
@@ -8,7 +8,8 @@ export default function GameListItem({game, position}){
                 className="grid w-full h-48 mb-5 pr-2 bg-slate-300 hover:bg-slate-400 rounded-md overflow-auto"
                 {...provided.dragHandleProps}
                 {...provided.draggableProps}
-                ref={provided.innerRef}>
+                ref={provided.innerRef}
+                onClick={() => getGame(game.id)}>
                             
                     <div className="text-start ml-3 mb-2 text-3xl font-bold">{game.title}</div>
 

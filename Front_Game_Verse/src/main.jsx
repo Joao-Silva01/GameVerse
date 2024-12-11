@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import GameList from './Components/GameList.jsx'
+import { Game } from './Components/Game.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path : "/GameList",
     element: <GameList/>
+  },
+  {
+    path : "/Game",
+    element: <Game />
   }
 ])
 

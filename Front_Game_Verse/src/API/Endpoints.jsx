@@ -24,3 +24,10 @@ export async function UpdatePosition(listId, inital, destination) {
 
     return await Connection.post(`/gameList/${listId}`, body);
 }
+
+// EndPoints GameList
+export async function fetchGameById(gameId) {
+    const response = await Connection.get(`/game/${gameId}`)
+
+    return response.data;
+}

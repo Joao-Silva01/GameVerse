@@ -49,6 +49,12 @@ function GameList(){
         await UpdatePosition(listId,init, dest);
     }
 
+    async function getGame(gameId) {
+        const query = new URLSearchParams();
+        query.set("gameId", gameId);
+        navigate(`/game?${query.toString()}`)
+    }
+
     useEffect(() =>{
         getByList()
     },[])
@@ -80,7 +86,8 @@ function GameList(){
                                 <GameListItem 
                                 key={game.id} 
                                 game={game}
-                                position={position}/>
+                                position={position}
+                                getGame={getGame}/>
                             ))}
                             {provided.placeholder}
                         </div>
